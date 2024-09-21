@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .menu-item {
+            position: relative; /* Ensure the item is a positioning context */
+            cursor: pointer; /* Change cursor to pointer for better UX */
+            color: #fff;
+        }
+
+        .menu-item:hover .description {
+            display: block; /* Show the description on hover */
+        }
+
+        .menu-item .description {
+            display: none; /* Keep it hidden by default */
+            position: absolute;
+            background-color: #491f01;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 200px;
+            top: 100%; /* Position it below the menu item */
+            left: 50%; /* Center it horizontally */
+            transform: translateX(-50%);
+            z-index: 10; /* Ensure it's above other elements */
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .bg-dark-custom {
+            background-color: #491f01a2 !important; /* Change this to your preferred shade of brown */
+        }
+
+        .bg-dark-custom2 {
+            background-color: #491f0172 !important; /* Change this to your preferred shade of brown */
+        }
+
+        .custom-navbar {
+    padding: 20px 40px; /* Adjust values to your preference */
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">Example Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hours">Hours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" style="position: relative; height: 100vh; background: url('https://imgur.com/ncl7YmK.jpg') no-repeat center center/cover;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
+            <h1 style="font-size: 4rem; font-weight: bold;">Example Restaurant</h1>
+            <p style="font-size: 1.5rem;">123 Main St, Your City</p>
+        </div>
+    </section>
+    
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding text-center bg-dark-custom">
+        <div class="container" style="color: #fff;">
+            <h2 class="mb-4">About Us</h2>
+            <p class="lead">Welcome to our Restaurant, where dining meets the beauty of the natural world. Nestled amidst lush greenery, our restaurant offers a serene escape, featuring expansive windows that frame stunning views.
+
+                Our menu celebrates seasonal, locally sourced ingredients, allowing you to savor dishes crafted with care—think fresh salads adorned with edible flowers and perfectly grilled fish paired with seasonal vegetables.
+                
+                Dine al fresco under the open sky, surrounded by the sounds of nature and the gentle rustle of leaves. We believe every meal is an opportunity to connect with the environment and each other, making every visit a memorable celebration of nature. Join us and experience the magic of dining in harmony with the earth!</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding bg-light text-center" style="background: url('https://imgur.com/zpfDtB5.jpg') no-repeat center center/cover;">
+        <div class="container">
+            <h2 class="mb-4" style="color: #fff;">Our Menu </h2>
+            <div class="row">
+
+                <hr style="border: 3px solid white; width: 80%; margin: 20px auto;"/>
+
+                <!-- Appetizers -->
+                <div class="col-12 mb-4 " style="color: #ffffff;">
+                    <h3>Appetizers</h3>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Bruschetta</h4>
+                    <p>$8.99</p>
+                    <div class="description">Toasted bread topped with tomatoes, garlic, and basil.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Calamari</h4>
+                    <p>$12.99</p>
+                    <div class="description">Lightly fried calamari served with marinara sauce.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Stuffed Mushrooms</h4>
+                    <p>$9.99</p>
+                    <div class="description">Mushrooms stuffed with herbs, cheese, and breadcrumbs.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Garlic Shrimp</h4>
+                    <p>$14.99</p>
+                    <div class="description">Shrimp sautéed in garlic butter sauce.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Caprese Salad</h4>
+                    <p>$11.99</p>
+                    <div class="description">Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>French Onion Soup</h4>
+                    <p>$7.99</p>
+                    <div class="description">Classic soup topped with melted Gruyère cheese and croutons.</div>
+                </div>
+
+                <hr style="border: 3px solid white; width: 80%; margin: 20px auto;"/>
+
+
+                <!-- Main Courses -->
+                <div class="col-12 my-4" style="color: #fff;">
+                    <h3>Main Courses</h3>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Grilled Salmon</h4>
+                    <p>$25.99</p>
+                    <div class="description">Delicious grilled salmon with a lemon butter sauce.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Filet Mignon</h4>
+                    <p>$35.99</p>
+                    <div class="description">A perfectly cooked steak served with garlic mashed potatoes.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Chicken Alfredo</h4>
+                    <p>$19.99</p>
+                    <div class="description">Creamy Alfredo sauce served with grilled chicken and fettuccine.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Lobster Ravioli</h4>
+                    <p>$28.99</p>
+                    <div class="description">Ravioli stuffed with lobster and served in a creamy tomato sauce.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>BBQ Ribs</h4>
+                    <p>$29.99</p>
+                    <div class="description">Slow-cooked ribs smothered in BBQ sauce, served with fries.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Vegetable Stir Fry</h4>
+                    <p>$16.99</p>
+                    <div class="description">A medley of vegetables stir-fried with soy sauce and sesame oil.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Margherita Pizza</h4>
+                    <p>$14.99</p>
+                    <div class="description">Classic pizza with fresh mozzarella, tomatoes, and basil.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Seafood Paella</h4>
+                    <p>$32.99</p>
+                    <div class="description">Traditional Spanish rice dish with a variety of fresh seafood.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Eggplant Parmesan</h4>
+                    <p>$18.99</p>
+                    <div class="description">Breaded eggplant baked with marinara sauce and mozzarella.</div>
+                </div>
+
+                <hr style="border: 3px solid white; width: 80%; margin: 20px auto;"/>
+
+                <!-- Desserts -->
+                <div class="col-12 my-4" style="color: #fff;">
+                    <h3>Desserts</h3>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Tiramisu</h4>
+                    <p>$8.99</p>
+                    <div class="description">Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Cheesecake</h4>
+                    <p>$7.99</p>
+                    <div class="description">Creamy cheesecake with a graham cracker crust.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Chocolate Lava Cake</h4>
+                    <p>$9.99</p>
+                    <div class="description">Warm chocolate cake with a gooey chocolate center.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Panna Cotta</h4>
+                    <p>$7.99</p>
+                    <div class="description">Silky smooth Italian dessert with a hint of vanilla.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Apple Pie</h4>
+                    <p>$6.99</p>
+                    <div class="description">Classic apple pie served with a scoop of vanilla ice cream.</div>
+                </div>
+
+
+                <hr style="border: 3px solid white; width: 80%; margin: 20px auto;"/>
+
+                <!-- Drinks -->
+                <div class="col-12 my-4" style="color: #fff;">
+                    <h3>Drinks</h3>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Red Wine</h4>
+                    <p>$9.00/glass</p>
+                    <div class="description">A selection of fine red wines by the glass.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>White Wine</h4>
+                    <p>$8.00/glass</p>
+                    <div class="description">A selection of crisp white wines by the glass.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Mojito</h4>
+                    <p>$10.00</p>
+                    <div class="description">A refreshing cocktail made with rum, lime, and mint.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Espresso</h4>
+                    <p>$3.50</p>
+                    <div class="description">Rich, bold espresso to finish your meal.</div>
+                </div>
+                <div class="col-md-4 menu-item">
+                    <h4>Craft Beer</h4>
+                    <p>$6.00</p>
+                    <div class="description">A rotating selection of local craft beers.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section id="hours" class="section-padding text-center" style="background: url('https://imgur.com/ivZgzGc.jpg') no-repeat center center/cover;">
+        <div class="container">
+            <div class="hours-box" style="background-color: rgba(0, 0, 0, 0.8); padding: 30px; border-radius: 10px;">
+                <h1 class="mb-4" style="color: #fff;">Hours of Operation</h1>
+                <ul class="list-unstyled" style="color: #fff;">
+                    <li>Monday - Friday: 11:00 AM - 10:00 PM</li>
+                    <li>Saturday: 12:00 PM - 11:00 PM</li>
+                    <li>Sunday: 12:00 PM - 9:00 PM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <section id="location" class="section-padding text-center bg-dark-custom" >
+        <div class="container">
+            <h2 class="mb-4" style="color: #fff;">Find Us</h2>
+            <div class="map-responsive">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.3703579258254!2d2.1506240760596618!3d41.387762671299875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a285bbc62c4d%3A0xcd8a70d67beb3993!2sDisfrutar!5e0!3m2!1sen!2snz!4v1726890561534!5m2!1sen!2snz"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-dark-custom2 text-center">
+        <div class="container">
+            <h2 class="mb-4" style="color: #fff;">Contact Us</h2>
+            <p class="lead" style="color: #fff;">We would love to hear from you, please feel free to reach out with any questions or reservations.</p>
+            <ul class="list-unstyled" style="color: #fff;">
+                <li>Phone: (123) 456-7890</li>
+                <li>Email: contact@ExampleRestaurant.com</li>
+                <li>Address: 123 Main St, Your City</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+
+    <footer class="bg-dark-custom text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">© 2024 Example Restaurant. All Rights Reserved.</p>
+
+            <p class="mb-0">Prices are subject to change without notice</p>
+
+            <p class="mb-0">Please visit us in store for any queries</p>
+
+            <p class="mb-0">Menu items may differ depending on season availability
+            </p>
+
+            <ul class="list-inline mt-3">
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/yourrestaurant" target="_blank" class="text-white">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/yourrestaurant" target="_blank" class="text-white">
+                        <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                </li>
+            </ul>
+
+            <br>
+            <br>
+            <p class="mb-0">Website Powered By Ohau Web Services
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
